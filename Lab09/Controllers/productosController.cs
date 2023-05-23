@@ -33,8 +33,8 @@ namespace Lab09.Controllers
         {
             if (ModelState.IsValid)
             {
-                int maxId = db.productos.Max(x => x.idproducto); // Obtiene el ID máximo de la tabla productos
-                productos.idproducto = maxId + 1; // Genera un nuevo ID sumando 1 al máximo ID
+                int maxId = db.productos.Max(x => x.idproducto); 
+                productos.idproducto = maxId + 1; 
 
                 db.productos.Add(productos);
                 db.SaveChanges();
